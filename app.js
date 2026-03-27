@@ -1,124 +1,110 @@
 
-  document.addEventListener("DOMContentLoaded", () => {
+  // ===== Navbar scroll effect =====
+  const navbar = document.getElementById('navbar');
 
-      // ========================
-      // NAVBAR SCROLL EFFECT
-      // ========================
-      const navbar = document.getElementById("navbar");
-
-      window.addEventListener("scroll", () => {
-          if (window.scrollY > 50) {
-              navbar.classList.add("scrolled");
-          } else {
-              navbar.classList.remove("scrolled");
-          }
-      });
-
-      // ========================
-      // MENÚ HAMBURGUESA (MÓVIL)
-      // ========================
-      const navToggle = document.querySelector(".nav-toggle");
-      const navLinks = document.querySelector(".nav-links");
-
-      navToggle.addEventListener("click", () => {
-          navToggle.classList.toggle("active");
-          navLinks.classList.toggle("open");
-      });
-
-      navLinks.querySelectorAll("a").forEach(link => {
-          link.addEventListener("click", () => {
-              navToggle.classList.remove("active");
-              navLinks.classList.remove("open");
-          });
-      });
-
-      // ========================
-      // ANIMACIONES AL HACER SCROLL
-      // ========================
-      const animatedElements = document.querySelectorAll(".animate-fade");
-
-      const observer = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-              if (entry.isIntersecting) {
-                  entry.target.classList.add("visible");
-                  observer.unobserve(entry.target);
-              }
-          });
-      }, {
-          threshold: 0.15
-      });
-
-      animatedElements.forEach(el => observer.observe(el));
-
-      // ========================
-      // SMOOTH SCROLL EN NAV LINKS
-      // ========================
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-          anchor.addEventListener("click", (e) => {
-              const targetId = anchor.getAttribute("href");
-              if (targetId === "#") return;
-
-              const target = document.querySelector(targetId);
-              if (target) {
-                  e.preventDefault();
-                  const navHeight = navbar.offsetHeight;
-                  const targetPosition = target.offsetTop - navHeight - 16;
-
-                  window.scrollTo({
-                      top: targetPosition,
-                      behavior: "smooth"
-                  });
-              }
-          });
-      });
-
-      // ========================
-      // PROYECTO CARDS - CLICK
-      // ========================
-      const proyectos = document.querySelectorAll(".project-card");
-
-      proyectos.forEach(proyecto => {
-          proyecto.addEventListener("click", (e) => {
-              if (e.target.closest(".project-links a")) return;
-              proyecto.style.borderColor = "var(--accent)";
-              setTimeout(() => {
-                  proyecto.style.borderColor = "";
-              }, 600);
-          });
-      });
-
-      // ========================
-      // ACTIVE LINK EN SCROLL
-      // ========================
-      const sections = document.querySelectorAll("section[id]");
-      const navAnchors = document.querySelectorAll(".nav-links a");
-
-      const highlightNav = () => {
-          const scrollPos = window.scrollY + navbar.offsetHeight + 40;
-
-          sections.forEach(section => {
-              const top = section.offsetTop;
-              const height = section.offsetHeight;
-              const id = section.getAttribute("id");
-
-              if (scrollPos >= top && scrollPos < top + height) {
-                  navAnchors.forEach(a => a.classList.remove("active"));
-                  const active = document.querySelector(`.nav-links a[href="#${id}"]`);
-                  if (active) active.classList.add("active");
-              }
-          });
-      };
-
-      window.addEventListener("scroll", highlightNav);
-      highlightNav();
+  window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
   });
 
-  Y agrega esto al final de tu CSS para el link activo en la navegación:
+  // ===== Mobile menu toggle =====
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
 
-  .nav-links a.active {
-      color: var(--accent);
+  menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      navLinks.classList.toggle('open');
+  });
+
+  navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+          menuToggle.classList.remove('active');
+          navLinks.classList.remove('open');
+      });
+  });
+
+  // ===== Active nav link on scroll =====
+  const sections = document.querySelectorAll('section[id]');
+
+  function updateActiveLink() {
+      const scrollY = window.scrollY + 100;
+
+      sections.forEach(section => {
+          const top = section.offsetTop;
+          const height = section.offsetHeight;
+          const id = section.getAttribute('id');
+          const link = document.querySelector(`.nav-links a[href="#${id}"]`);
+
+          if (link) {
+              link.classList.toggle('active', scrollY >= top && scrollY < top + height);
+          }
+      });
   }
 
-  .nav-links a.active::after {
-      width: 100%;
+  window.addEventListener('scroll', updateActiveLink);
+
+  // ===== Animate elements on scroll (IntersectionObserver) =====
+  const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+
+              // Animate skill bars inside the element
+              entry.target.querySelectorAll('.skill-fill').forEach(bar => {
+                  bar.style.width = bar.dataset.level + '%';
+              });
+
+              // If the element itself is a skill-fill bar
+              if (entry.target.classList.contains('skill-fill')) {
+                  entry.target.style.width = entry.target.dataset.level + '%';
+              }
+          }
+      });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.skill-card, .project-card').forEach(el => {
+      observer.observe(el);
+  });
+
+  // ===== Counter animation =====
+  function animateCounters() {
+      const counters = document.querySelectorAll('.stat-number');
+
+      counters.forEach(counter => {
+          const target = +counter.dataset.target;
+          const rect = counter.getBoundingClientRect();
+
+          if (rect.top < window.innerHeight - 50 && !counter.dataset.done) {
+              counter.dataset.done = 'true';
+              let current = 0;
+              const step = Math.max(1, Math.floor(target / 40));
+              const interval = setInterval(() => {
+                  current += step;
+                  if (current >= target) {
+                      current = target;
+                      clearInterval(interval);
+                  }
+                  counter.textContent = current;
+              }, 30);
+          }
+      });
   }
+
+  window.addEventListener('scroll', animateCounters);
+  window.addEventListener('load', animateCounters);
+
+  // ===== Contact form =====
+  document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const btn = this.querySelector('button[type="submit"]');
+      const originalText = btn.textContent;
+
+      btn.textContent = 'Enviado!';
+      btn.style.background = '#28c840';
+
+      setTimeout(() => {
+          btn.textContent = originalText;
+          btn.style.background = '';
+          this.reset();
+      }, 2000);
+  });
