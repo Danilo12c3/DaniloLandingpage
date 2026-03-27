@@ -1,133 +1,262 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Danilo Sebastian | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
 
-    <nav id="navbar">
-        <div class="container nav-content">
-            <a href="#" class="logo">D<span>.</span></a>
-            <ul class="nav-links">
-                <li><a href="#sobre-mi">Sobre mí</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#experiencia">Experiencia</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-            <button class="nav-toggle" aria-label="Abrir menú">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </nav>
+  <!DOCTYPE html>
+  <html lang="es">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Danilo Sebastian | Portfolio</title>
+      <link rel="stylesheet" href="style.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
 
-    <header id="hero">
-        <div class="container hero-content">
-            <p class="hero-greeting">Hola, soy</p>
-            <h1>Danilo Sebastian</h1>
-            <p class="subtitle">Técnico Superior en ASIR & Administrador Logístico</p>
-            <p class="hero-description">Especialista en administración de sistemas informáticos en red y gestión avanzada de entornos logísticos digitales.</p>
-            <div class="hero-buttons">
-                <a href="#experiencia" class="btn btn-primary">Ver Experiencia</a>
-                <a href="#contacto" class="btn btn-outline">Contacto</a>
-            </div>
-        </div>
-    </header>
+      <!-- Navbar -->
+      <nav id="navbar">
+          <div class="nav-container">
+              <a href="#" class="logo">D<span>.</span></a>
+              <ul class="nav-links">
+                  <li><a href="#inicio">Inicio</a></li>
+                  <li><a href="#sobre-mi">Sobre mí</a></li>
+                  <li><a href="#experiencia">Experiencia</a></li>
+                  <li><a href="#formacion">Formación</a></li>
+                  <li><a href="#habilidades">Habilidades</a></li>
+                  <li><a href="#contacto">Contacto</a></li>
+              </ul>
+              <button class="menu-toggle" aria-label="Abrir menú">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+              </button>
+          </div>
+      </nav>
 
-    <main>
-        <section id="sobre-mi" class="container">
-            <div class="card animate-fade">
-                <h2 class="section-title">Sobre mí</h2>
-                <div class="about-content">
-                    <p>Soy un profesional apasionado por la tecnología con un Grado Superior en <strong>Administración de Sistemas Informáticos en Red (ASIR)</strong>. Actualmente combino mis competencias técnicas con la gestión logística de alto nivel, optimizando procesos mediante software especializado y análisis de datos. Soy una persona motivada, con capacidad de trabajo en equipo y disponibilidad inmediata.</p>
-                </div>
-            </div>
-        </section>
+      <!-- Hero -->
+      <section id="inicio" class="hero">
+          <div class="hero-content">
+              <p class="hero-greeting">Hola, soy</p>
+              <h1 class="hero-name">Danilo Sebastian</h1>
+              <p class="hero-role">Técnico en Administración de Sistemas Informáticos en Red</p>
+              <p class="hero-desc">Profesional con experiencia en administración de sistemas, logística y gestión de
+  inventarios. Disponibilidad inmediata e incorporación flexible.</p>
+              <div class="hero-buttons">
+                  <a href="#experiencia" class="btn btn-primary">Ver Experiencia</a>
+                  <a href="#contacto" class="btn btn-outline">Contáctame</a>
+              </div>
+          </div>
+          <div class="hero-visual">
+              <div class="code-block">
+                  <div class="code-header">
+                      <span class="dot red"></span>
+                      <span class="dot yellow"></span>
+                      <span class="dot green"></span>
+                  </div>
+                  <pre><code><span class="code-keyword">const</span> danilo = {
+    <span class="code-prop">nombre</span>: <span class="code-string">"Danilo Sebastian"</span>,
+    <span class="code-prop">rol</span>: <span class="code-string">"Técnico ASIR"</span>,
+    <span class="code-prop">skills</span>: [<span class="code-string">"Redes"</span>, <span
+  class="code-string">"Python"</span>, <span class="code-string">"HTML"</span>],
+    <span class="code-prop">disponible</span>: <span class="code-bool">true</span>,
+    <span class="code-method">saludo</span>() {
+      <span class="code-keyword">return</span> <span class="code-string">"Bienvenido!"</span>;
+    }
+  };</code></pre>
+              </div>
+          </div>
+      </section>
 
-        <section id="habilidades" class="container">
-            <h2 class="section-title animate-fade">Habilidades</h2>
-            <div class="skills-grid animate-fade">
-                <div class="skill-item">
-                    <span class="skill-icon">&#128230;</span>
-                    <h3>Logística Digital</h3>
-                    <p>Manejo experto de JDA (Blue Yonder), entornos SGA y gestión de KPIs.</p>
-                </div>
-                <div class="skill-item">
-                    <span class="skill-icon">&#127760;</span>
-                    <h3>Sistemas y Redes</h3>
-                    <p>Administración de redes, Office 365 y soporte técnico informático.</p>
-                </div>
-                <div class="skill-item">
-                    <span class="skill-icon">&#60;/&#62;</span>
-                    <h3>Programación</h3>
-                    <p>Desarrollo de scripts y web básica con Python y HTML.</p>
-                </div>
-                <div class="skill-item">
-                    <span class="skill-icon">&#128483;</span>
-                    <h3>Idiomas</h3>
-                    <p>Español (Nativo) e Inglés (Nivel Intermedio).</p>
-                </div>
-            </div>
-        </section>
+      <!-- Sobre mí -->
+      <section id="sobre-mi" class="about">
+          <div class="container">
+              <h2 class="section-title">Sobre mí</h2>
+              <div class="about-content">
+                  <div class="about-image">
+                      <div class="about-placeholder">
+                          <span>D</span>
+                      </div>
+                  </div>
+                  <div class="about-text">
+                      <p>Soy <strong>Danilo Sebastian Chahuara Cervan</strong>, Técnico en Administración de Sistemas
+  Informáticos en Red. Cuento con experiencia en administración logística, gestión de inventarios y manejo de software
+  especializado como JDA (Blue Yonder).</p>
+                      <p>Me apasiona la tecnología, las redes y la programación. Tengo carnet de conducir, coche propio,
+   disponibilidad para viajar e incorporación inmediata. Destaco por mi capacidad de trabajar en equipo y alta
+  motivación.</p>
+                      <div class="about-stats">
+                          <div class="stat">
+                              <span class="stat-number" data-target="2">0</span>+
+                              <span class="stat-label">Experiencias</span>
+                          </div>
+                          <div class="stat">
+                              <span class="stat-number" data-target="2">0</span>
+                              <span class="stat-label">Idiomas</span>
+                          </div>
+                          <div class="stat">
+                              <span class="stat-number" data-target="100">0</span>%
+                              <span class="stat-label">Dedicación</span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
 
-        <section id="experiencia" class="container">
-            <h2 class="section-title animate-fade">Experiencia Laboral</h2>
-            <div class="projects-grid animate-fade">
-                <article class="project-card">
-                    <div class="project-header">
-                        <span class="project-icon">&#128666;</span>
-                    </div>
-                    <h3>Administrador Logístico</h3>
-                    <p><strong>DHL Loreal</strong> (Actualidad)</p>
-                    <p>Gestión de stock con JDA, coordinación de flotas y supervisión de expediciones.</p>
-                    <div class="project-tags">
-                        <span class="tag">JDA</span>
-                        <span class="tag">Blue Yonder</span>
-                        <span class="tag">KPIs</span>
-                    </div>
-                </article>
+      <!-- Experiencia Laboral -->
+      <section id="experiencia" class="projects">
+          <div class="container">
+              <h2 class="section-title">Experiencia Laboral</h2>
+              <div class="projects-grid">
+                  <div class="project-card" data-aos>
+                      <div class="project-image">
+                          <div class="project-placeholder">01</div>
+                      </div>
+                      <div class="project-info">
+                          <h3>Administrador Logístico / Carretillero</h3>
+                          <p class="project-company">DHL Loreal — Actualidad</p>
+                          <ul class="experience-list">
+                              <li>Gestión de inventarios y control de stock mediante software JDA (Blue Yonder).</li>
+                              <li>Coordinación de flotas y optimización de rutas de distribución.</li>
+                              <li>Supervisión de la recepción, almacenamiento y expedición de mercancías.</li>
+                              <li>Elaboración de informes de rendimiento y cumplimiento de KPI logísticos.</li>
+                              <li>Uso avanzado de SGA (JDA) para el seguimiento de pedidos y movimientos de
+  almacén.</li>
+                          </ul>
+                          <div class="project-tags">
+                              <span>JDA</span>
+                              <span>SGA</span>
+                              <span>Logística</span>
+                              <span>KPIs</span>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="project-card" data-aos>
+                      <div class="project-image">
+                          <div class="project-placeholder">02</div>
+                      </div>
+                      <div class="project-info">
+                          <h3>Técnico ASIR (Prácticas)</h3>
+                          <p class="project-company">Cero Custos Carbón</p>
+                          <p>Prácticas del Grado Superior de Administración de Sistemas Informáticos en Red.</p>
+                          <div class="project-tags">
+                              <span>Redes</span>
+                              <span>Sistemas</span>
+                              <span>ASIR</span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
 
-                <article class="project-card">
-                    <div class="project-header">
-                        <span class="project-icon">&#128187;</span>
-                    </div>
-                    <h3>Técnico ASIR (Prácticas)</h3>
-                    <p><strong>Cero Custos Carbón</strong></p>
-                    <p>Apoyo en la administración de sistemas y mantenimiento de infraestructuras de red.</p>
-                    <div class="project-tags">
-                        <span class="tag">Redes</span>
-                        <span class="tag">Sistemas</span>
-                        <span class="tag">Soporte</span>
-                    </div>
-                </article>
-            </div>
-        </section>
+      <!-- Formación -->
+      <section id="formacion" class="about">
+          <div class="container">
+              <h2 class="section-title">Formación Académica</h2>
+              <div class="projects-grid">
+                  <div class="project-card" data-aos>
+                      <div class="project-info">
+                          <h3>Grado Superior de ASIR</h3>
+                          <p class="project-company">Colegio Brianda de Mendoza</p>
+                          <p>Administración de Sistemas Informáticos en Red.</p>
+                          <div class="project-tags">
+                              <span>Redes</span>
+                              <span>Sistemas</span>
+                              <span>Programación</span>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="project-card" data-aos>
+                      <div class="project-info">
+                          <h3>Bachillerato</h3>
+                          <p class="project-company">Colegio Brianda de Mendoza</p>
+                      </div>
+                  </div>
+                  <div class="project-card" data-aos>
+                      <div class="project-info">
+                          <h3>Educación Secundaria Obligatoria</h3>
+                          <p class="project-company">Colegio Niña María R.R. Adoratrices</p>
+                          <p>Inicio en Colegio Santa Úrsula Cusco-Perú.</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
 
-        <section id="contacto" class="container">
-            <div class="card contact-card animate-fade">
-                <h2 class="section-title">Contacto</h2>
-                <p>¿Interesado en mi perfil? ¡Hablemos!</p>
-                <p>📍 Calle General Vives Camino #22</p>
-                <p>📞 640 22 33 46</p>
-                <a href="mailto:danilocervan_5@outlook.com" class="btn btn-primary">Enviar email</a>
-                <div class="social-links" style="margin-top: 20px;">
-                    <span>Carnet B y Coche propio | Disponibilidad para viajar</span>
-                </div>
-            </div>
-        </section>
-    </main>
+      <!-- Habilidades -->
+      <section id="habilidades" class="skills">
+          <div class="container">
+              <h2 class="section-title">Habilidades</h2>
+              <div class="skills-grid">
+                  <div class="skill-card" data-aos>
+                      <div class="skill-icon">&#128230;</div>
+                      <h3>Software Logístico</h3>
+                      <p>Manejo experto de JDA (Blue Yonder) y entornos SGA.</p>
+                      <div class="skill-bar"><div class="skill-fill" data-level="90"></div></div>
+                  </div>
+                  <div class="skill-card" data-aos>
+                      <div class="skill-icon">&#128187;</div>
+                      <h3>Informática</h3>
+                      <p>Manejo del paquete Office 365 y entornos de redes.</p>
+                      <div class="skill-bar"><div class="skill-fill" data-level="85"></div></div>
+                  </div>
+                  <div class="skill-card" data-aos>
+                      <div class="skill-icon">&#60;/&#62;</div>
+                      <h3>Programación</h3>
+                      <p>Desarrollo con HTML y Python.</p>
+                      <div class="skill-bar"><div class="skill-fill" data-level="70"></div></div>
+                  </div>
+                  <div class="skill-card" data-aos>
+                      <div class="skill-icon">&#127760;</div>
+                      <h3>Idiomas</h3>
+                      <p>Español nativo. Inglés intermedio.</p>
+                      <div class="skill-bar"><div class="skill-fill" data-level="75"></div></div>
+                  </div>
+              </div>
+          </div>
+      </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Danilo Sebastian Chahuara Cervan — Construido con HTML y Python.</p>
-        </div>
-    </footer>
+      <!-- Contacto -->
+      <section id="contacto" class="contact">
+          <div class="container">
+              <h2 class="section-title">Contacto</h2>
+              <p class="contact-subtitle">¿Tienes una oportunidad o proyecto en mente? ¡Hablemos!</p>
+              <div class="contact-info">
+                  <p>&#128222; 640 22 33 46</p>
+                  <p>&#128231; danilocervan_5@outlook.com</p>
+                  <p>&#128205; Calle General Vives Camino #22</p>
+              </div>
+              <form class="contact-form" id="contactForm">
+                  <div class="form-group">
+                      <input type="text" id="name" placeholder="Tu nombre" required>
+                  </div>
+                  <div class="form-group">
+                      <input type="email" id="email" placeholder="Tu email" required>
+                  </div>
+                  <div class="form-group">
+                      <textarea id="message" rows="5" placeholder="Tu mensaje..." required></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary btn-full">Enviar Mensaje</button>
+              </form>
+              <div class="social-links">
+                  <a href="https://github.com/Danilo12c3" target="_blank" class="social-link" title="GitHub">
+                      <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M12 2C6.477 2 2 6.484
+   2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.3
+  69-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341
+  1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988
+  1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337
+  1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566
+   4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22
+  6.484 17.522 2 12 2z"/></svg>
+                  </a>
+              </div>
+          </div>
+      </section>
 
-    <script src="app.js"></script>
-</body>
-</html>
+      <!-- Footer -->
+      <footer>
+          <p>&copy; 2026 Danilo Sebastian Chahuara Cervan. Hecho con dedicación.</p>
+      </footer>
+
+      <script src="app.js"></script>
+  </body>
+  </html>
