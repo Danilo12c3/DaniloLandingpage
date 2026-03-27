@@ -1,158 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danilo Sebastian | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
 
-  <!DOCTYPE html>
-  <html lang="es">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Danilo | Portfolio</title>
-      <link rel="stylesheet" href="style.css">
-      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  </head>
-  <body>
+    <nav id="navbar">
+        <div class="container nav-content">
+            <a href="#" class="logo">D<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#experiencia">Experiencia</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
 
-      <nav id="navbar">
-          <div class="container nav-content">
-              <a href="#" class="logo">D<span>.</span></a>
-              <ul class="nav-links">
-                  <li><a href="#sobre-mi">Sobre mí</a></li>
-                  <li><a href="#habilidades">Habilidades</a></li>
-                  <li><a href="#proyectos">Proyectos</a></li>
-                  <li><a href="#contacto">Contacto</a></li>
-              </ul>
-              <button class="nav-toggle" aria-label="Abrir menú">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-              </button>
-          </div>
-      </nav>
+    <header id="hero">
+        <div class="container hero-content">
+            <p class="hero-greeting">Hola, soy</p>
+            <h1>Danilo Sebastian</h1>
+            <p class="subtitle">Técnico Superior en ASIR & Administrador Logístico</p>
+            <p class="hero-description">Especialista en administración de sistemas informáticos en red y gestión avanzada de entornos logísticos digitales.</p>
+            <div class="hero-buttons">
+                <a href="#experiencia" class="btn btn-primary">Ver Experiencia</a>
+                <a href="#contacto" class="btn btn-outline">Contacto</a>
+            </div>
+        </div>
+    </header>
 
-      <header id="hero">
-          <div class="container hero-content">
-              <p class="hero-greeting">Hola, soy</p>
-              <h1>Danilo</h1>
-              <p class="subtitle">Desarrollador Web Full Stack</p>
-              <p class="hero-description">Transformo ideas en experiencias digitales modernas, funcionales y
-  atractivas.</p>
-              <div class="hero-buttons">
-                  <a href="#proyectos" class="btn btn-primary">Ver proyectos</a>
-                  <a href="#contacto" class="btn btn-outline">Contacto</a>
-              </div>
-          </div>
-      </header>
+    <main>
+        <section id="sobre-mi" class="container">
+            <div class="card animate-fade">
+                <h2 class="section-title">Sobre mí</h2>
+                <div class="about-content">
+                    <p>Soy un profesional apasionado por la tecnología con un Grado Superior en <strong>Administración de Sistemas Informáticos en Red (ASIR)</strong>. Actualmente combino mis competencias técnicas con la gestión logística de alto nivel, optimizando procesos mediante software especializado y análisis de datos. Soy una persona motivada, con capacidad de trabajo en equipo y disponibilidad inmediata.</p>
+                </div>
+            </div>
+        </section>
 
-      <main>
-          <section id="sobre-mi" class="container">
-              <div class="card animate-fade">
-                  <h2 class="section-title">Sobre mí</h2>
-                  <div class="about-content">
-                      <p>Soy un apasionado de la tecnología y estudiante de programación enfocado en crear soluciones
-  digitales eficientes y atractivas. Me especializo en desarrollo web con tecnologías modernas, siempre buscando
-  aprender y mejorar.</p>
-                  </div>
-              </div>
-          </section>
+        <section id="habilidades" class="container">
+            <h2 class="section-title animate-fade">Habilidades</h2>
+            <div class="skills-grid animate-fade">
+                <div class="skill-item">
+                    <span class="skill-icon">&#128230;</span>
+                    <h3>Logística Digital</h3>
+                    <p>Manejo experto de JDA (Blue Yonder), entornos SGA y gestión de KPIs.</p>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-icon">&#127760;</span>
+                    <h3>Sistemas y Redes</h3>
+                    <p>Administración de redes, Office 365 y soporte técnico informático.</p>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-icon">&#60;/&#62;</span>
+                    <h3>Programación</h3>
+                    <p>Desarrollo de scripts y web básica con Python y HTML.</p>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-icon">&#128483;</span>
+                    <h3>Idiomas</h3>
+                    <p>Español (Nativo) e Inglés (Nivel Intermedio).</p>
+                </div>
+            </div>
+        </section>
 
-          <section id="habilidades" class="container">
-              <h2 class="section-title animate-fade">Habilidades</h2>
-              <div class="skills-grid animate-fade">
-                  <div class="skill-item">
-                      <span class="skill-icon">&#60;/&#62;</span>
-                      <h3>Frontend</h3>
-                      <p>HTML, CSS, JavaScript, React</p>
-                  </div>
-                  <div class="skill-item">
-                      <span class="skill-icon">&#9881;</span>
-                      <h3>Backend</h3>
-                      <p>Node.js, Express, Python</p>
-                  </div>
-                  <div class="skill-item">
-                      <span class="skill-icon">&#128451;</span>
-                      <h3>Bases de datos</h3>
-                      <p>MySQL, MongoDB</p>
-                  </div>
-                  <div class="skill-item">
-                      <span class="skill-icon">&#9732;</span>
-                      <h3>Herramientas</h3>
-                      <p>Git, VS Code, Figma</p>
-                  </div>
-              </div>
-          </section>
+        <section id="experiencia" class="container">
+            <h2 class="section-title animate-fade">Experiencia Laboral</h2>
+            <div class="projects-grid animate-fade">
+                <article class="project-card">
+                    <div class="project-header">
+                        <span class="project-icon">&#128666;</span>
+                    </div>
+                    <h3>Administrador Logístico</h3>
+                    <p><strong>DHL Loreal</strong> (Actualidad)</p>
+                    <p>Gestión de stock con JDA, coordinación de flotas y supervisión de expediciones.</p>
+                    <div class="project-tags">
+                        <span class="tag">JDA</span>
+                        <span class="tag">Blue Yonder</span>
+                        <span class="tag">KPIs</span>
+                    </div>
+                </article>
 
-          <section id="proyectos" class="container">
-              <h2 class="section-title animate-fade">Proyectos Destacados</h2>
-              <div class="projects-grid animate-fade">
-                  <article class="project-card">
-                      <div class="project-header">
-                          <span class="project-icon">&#128640;</span>
-                          <div class="project-links">
-                              <a href="#" aria-label="Ver código">Code</a>
-                              <a href="#" aria-label="Ver demo">Demo</a>
-                          </div>
-                      </div>
-                      <h3>Proyecto 1</h3>
-                      <p>Descripción breve del impacto y tecnología usada en este proyecto.</p>
-                      <div class="project-tags">
-                          <span class="tag">HTML</span>
-                          <span class="tag">CSS</span>
-                          <span class="tag">JavaScript</span>
-                      </div>
-                  </article>
-                  <article class="project-card">
-                      <div class="project-header">
-                          <span class="project-icon">&#128187;</span>
-                          <div class="project-links">
-                              <a href="#" aria-label="Ver código">Code</a>
-                              <a href="#" aria-label="Ver demo">Demo</a>
-                          </div>
-                      </div>
-                      <h3>Proyecto 2</h3>
-                      <p>Una aplicación web interactiva desarrollada con tecnologías modernas.</p>
-                      <div class="project-tags">
-                          <span class="tag">React</span>
-                          <span class="tag">Node.js</span>
-                          <span class="tag">MongoDB</span>
-                      </div>
-                  </article>
-                  <article class="project-card">
-                      <div class="project-header">
-                          <span class="project-icon">&#127912;</span>
-                          <div class="project-links">
-                              <a href="#" aria-label="Ver código">Code</a>
-                              <a href="#" aria-label="Ver demo">Demo</a>
-                          </div>
-                      </div>
-                      <h3>Proyecto 3</h3>
-                      <p>Diseño y desarrollo de una interfaz moderna y responsive.</p>
-                      <div class="project-tags">
-                          <span class="tag">Figma</span>
-                          <span class="tag">CSS</span>
-                          <span class="tag">JS</span>
-                      </div>
-                  </article>
-              </div>
-          </section>
+                <article class="project-card">
+                    <div class="project-header">
+                        <span class="project-icon">&#128187;</span>
+                    </div>
+                    <h3>Técnico ASIR (Prácticas)</h3>
+                    <p><strong>Cero Custos Carbón</strong></p>
+                    <p>Apoyo en la administración de sistemas y mantenimiento de infraestructuras de red.</p>
+                    <div class="project-tags">
+                        <span class="tag">Redes</span>
+                        <span class="tag">Sistemas</span>
+                        <span class="tag">Soporte</span>
+                    </div>
+                </article>
+            </div>
+        </section>
 
-          <section id="contacto" class="container">
-              <div class="card contact-card animate-fade">
-                  <h2 class="section-title">Contacto</h2>
-                  <p>¿Tienes un proyecto en mente? ¡Hablemos!</p>
-                  <a href="mailto:danilo@ejemplo.com" class="btn btn-primary">Enviar email</a>
-                  <div class="social-links">
-                      <a href="#" aria-label="GitHub">GitHub</a>
-                      <a href="#" aria-label="LinkedIn">LinkedIn</a>
-                  </div>
-              </div>
-          </section>
-      </main>
+        <section id="contacto" class="container">
+            <div class="card contact-card animate-fade">
+                <h2 class="section-title">Contacto</h2>
+                <p>¿Interesado en mi perfil? ¡Hablemos!</p>
+                <p>📍 Calle General Vives Camino #22</p>
+                <p>📞 640 22 33 46</p>
+                <a href="mailto:danilocervan_5@outlook.com" class="btn btn-primary">Enviar email</a>
+                <div class="social-links" style="margin-top: 20px;">
+                    <span>Carnet B y Coche propio | Disponibilidad para viajar</span>
+                </div>
+            </div>
+        </section>
+    </main>
 
-      <footer>
-          <div class="container">
-              <p>&copy; 2026 Danilo — Construido con código y café.</p>
-          </div>
-      </footer>
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Danilo Sebastian Chahuara Cervan — Construido con HTML y Python.</p>
+        </div>
+    </footer>
 
-      <script src="app.js"></script>
-  </body>
-  </html>
-
+    <script src="app.js"></script>
+</body>
+</html>
