@@ -7,24 +7,6 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// ===== Menú Móvil =====
-const menuToggle = document.querySelector('.menu-toggle');
-const navLinks = document.querySelector('.nav-links');
-
-if (menuToggle && navLinks) {
-    menuToggle.addEventListener('click', () => {
-        menuToggle.classList.toggle('active');
-        navLinks.classList.toggle('open');
-    });
-
-    navLinks.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            menuToggle.classList.remove('active');
-            navLinks.classList.remove('open');
-        });
-    });
-}
-
 // ===== Resaltar Enlace Activo en Scroll =====
 const sections = document.querySelectorAll('section[id]');
 
@@ -45,28 +27,25 @@ function updateActiveLink() {
 
 window.addEventListener('scroll', updateActiveLink);
 
-// ===== Animaciones al hacer Scroll (IntersectionObserver) =====
-const observerOptions = {
-    threshold: 0.1,
+// ===== Animaciones de Salto de Página (Scroll Reveal) =====
+// Detecta cuando una sección entra en la pantalla para animarla
+const revealOptions = {
+    threshold: 0.15, // La animación salta cuando el 15% de la sección es visible
     rootMargin: "0px 0px -50px 0px"
 };
 
-const observer = new IntersectionObserver((entries) => {
+const revealObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-            observer.unobserve(entry.target); // Deja de observar una vez animado
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target); // Anima solo una vez
         }
     });
-}, observerOptions);
+}, revealOptions);
 
-// Aplicar estilos iniciales y observar elementos
-document.querySelectorAll('.skill-card, .project-card, .about-content').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(30px)';
-    el.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
-    observer.observe(el);
+// Aplicar el observador a todas las secciones con la clase 'fade-section'
+document.querySelectorAll('.fade-section').forEach(section => {
+    revealObserver.observe(section);
 });
 
 // ===== Gestión del Formulario de Contacto =====
@@ -79,7 +58,6 @@ if (contactForm) {
         const btn = this.querySelector('button[type="submit"]');
         const originalText = btn.textContent;
 
-        // Estilos adaptados al nuevo tema Midnight Blue
         btn.textContent = 'Mensaje Enviado';
         btn.style.backgroundColor = 'rgba(56, 189, 248, 0.1)';
         btn.style.color = '#38bdf8';
