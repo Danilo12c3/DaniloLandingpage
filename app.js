@@ -28,9 +28,8 @@ function updateActiveLink() {
 window.addEventListener('scroll', updateActiveLink);
 
 // ===== Animaciones de Salto de Página (Scroll Reveal) =====
-// Detecta cuando una sección entra en la pantalla para animarla
 const revealOptions = {
-    threshold: 0.15, // La animación salta cuando el 15% de la sección es visible
+    threshold: 0.15,
     rootMargin: "0px 0px -50px 0px"
 };
 
@@ -38,17 +37,16 @@ const revealObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('visible');
-            observer.unobserve(entry.target); // Anima solo una vez
+            observer.unobserve(entry.target); 
         }
     });
 }, revealOptions);
 
-// Aplicar el observador a todas las secciones con la clase 'fade-section'
 document.querySelectorAll('.fade-section').forEach(section => {
     revealObserver.observe(section);
 });
 
-// ===== Gestión del Formulario de Contacto =====
+// ===== Gestión del Formulario de Contacto (Efecto NEÓN) =====
 const contactForm = document.getElementById('contactForm');
 
 if (contactForm) {
@@ -58,14 +56,24 @@ if (contactForm) {
         const btn = this.querySelector('button[type="submit"]');
         const originalText = btn.textContent;
 
-        btn.textContent = 'Mensaje Enviado';
-        btn.style.backgroundColor = 'rgba(56, 189, 248, 0.1)';
-        btn.style.color = '#38bdf8';
-        btn.style.borderColor = '#38bdf8';
+        // Activación de tonos Neón Azul/Cyan
+        btn.textContent = '¡Mensaje Enviado!';
+        btn.style.backgroundColor = 'rgba(10, 255, 255, 0.1)';
+        btn.style.color = '#0affff';
+        btn.style.borderColor = '#0affff';
+        // Creación del resplandor (Glow)
+        btn.style.boxShadow = '0 0 10px #0affff, 0 0 20px #0affff, 0 0 40px #0affff, inset 0 0 10px rgba(10,255,255,0.5)';
+        btn.style.textShadow = '0 0 5px #0affff, 0 0 10px #0affff';
+        btn.style.transition = 'all 0.3s ease';
 
         setTimeout(() => {
+            // Apagado del Neón
             btn.textContent = originalText;
             btn.style.backgroundColor = 'transparent';
+            btn.style.color = '';
+            btn.style.borderColor = '';
+            btn.style.boxShadow = 'none';
+            btn.style.textShadow = 'none';
             this.reset();
         }, 3000);
     });
