@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
+/* ===== Reset & Base ===== */
 *, *::before, *::after {
     margin: 0;
     padding: 0;
@@ -84,7 +85,7 @@ a {
     text-shadow: 0 0 10px rgba(56, 189, 248, 1), 0 0 20px rgba(56, 189, 248, 0.8);
 }
 
-/* ===== Layout base de Secciones ===== */
+/* ===== Layout base ===== */
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -222,14 +223,13 @@ section {
     text-shadow: 0 0 10px #ffffff;
 }
 
-/* ===== Grids Organizados (Tarjetas) ===== */
+/* ===== Tarjetas (Cards) ===== */
 .skills-grid, .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 30px;
 }
 
-/* TARJETAS CON BORDE NEÓN BLANCO SIEMPRE ACTIVO */
 .skill-card, .project-card {
     background: rgba(30, 41, 59, 0.4);
     border: 1px solid #ffffff; 
@@ -278,7 +278,7 @@ section {
     box-shadow: 0 0 8px #38bdf8;
 }
 
-/* ===== Formulario ===== */
+/* ===== Formulario y Contacto ===== */
 .contact-form input,
 .contact-form textarea {
     width: 100%;
@@ -304,12 +304,32 @@ section {
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.6), inset 0 0 10px rgba(255, 255, 255, 0.2); 
 }
 
-/* ===== Iconos SVG ===== */
-svg {
-    stroke: #38bdf8 !important;
+/* ===== Estilo específico para LinkedIn ===== */
+.contact-info a {
+    color: #38bdf8 !important;
+    font-weight: 600;
+    text-shadow: 0 0 8px rgba(56, 189, 248, 0.6);
+    border-bottom: 1px solid rgba(56, 189, 248, 0.3);
 }
 
-/* ===== Animaciones de Salto de Página (Transiciones) ===== */
+.contact-info a:hover {
+    color: #ffffff !important;
+    text-shadow: 0 0 12px rgba(255, 255, 255, 0.8), 0 0 20px rgba(56, 189, 248, 0.5);
+    border-bottom: 1px solid #ffffff;
+}
+
+/* ===== Iconos SVG Globales ===== */
+svg {
+    stroke: #38bdf8 !important;
+    transition: all 0.3s ease;
+}
+
+.contact-info p:hover svg {
+    filter: drop-shadow(0 0 8px rgba(56, 189, 248, 1));
+    transform: scale(1.1);
+}
+
+/* ===== Animaciones de entrada ===== */
 .fade-section {
     opacity: 0;
     transform: translateY(40px);
