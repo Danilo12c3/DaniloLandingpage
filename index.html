@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Danilo Sebastian | Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <nav id="navbar">
         <div class="nav-container">
-            <a href="#" class="logo">D<span>.</span></a>
+            <a href="#" class="logo">Danilo<span>.</span></a>
             <ul class="nav-links">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#sobre-mi">Perfil</a></li>
@@ -26,189 +26,322 @@
         </div>
     </nav>
 
+    <!-- ===== HERO BENTO ===== -->
     <section id="inicio" class="hero fade-section">
-        <div class="container" style="display: flex; align-items: center; flex-wrap: wrap;">
-            <div class="hero-content">
-                <span class="hero-greeting">Bienvenido, soy</span>
-                <h1 class="hero-name">Danilo Sebastian</h1>
-                <p class="hero-role">Técnico ASIR y Logística</p>
-                <p class="hero-desc">Combino sólidos conocimientos en administración de sistemas informáticos con experiencia probada en gestión logística avanzada. Aporto soluciones eficientes y organización metódica.</p>
-                <div class="hero-buttons">
-                    <a href="#experiencia" class="btn btn-primary">Ver Experiencia</a>
-                    <a href="#contacto" class="btn">Contactar</a>
+        <div class="container">
+            <div class="hero-grid">
+
+                <!-- Main card -->
+                <div class="bento hero-main">
+                    <div class="hero-greeting">
+                        <div class="hero-avatar">DS</div>
+                        <div class="hero-hello-text">
+                            <span class="hi">Hola, soy Danilo Sebastian</span>
+                            <span class="role">Técnico ASIR · Logística</span>
+                        </div>
+                    </div>
+
+                    <h1 class="hero-title">Uniendo sistemas, redes y logística para construir operativas eficientes.</h1>
+                    <p class="hero-desc">Técnico Superior en ASIR con experiencia probada gestionando operativas logísticas avanzadas. Combino administración de infraestructuras IT con control SGA/JDA para aportar soluciones ordenadas, medibles y fiables.</p>
+
+                    <div class="hero-cta">
+                        <a href="#experiencia" class="btn btn-primary">Ver experiencia</a>
+                        <a href="#contacto" class="btn">Contactar</a>
+                    </div>
+                </div>
+
+                <!-- Social / contact card -->
+                <div class="bento hero-social">
+                    <a href="https://www.linkedin.com/in/danilo-sebastián-cervan-9366b9333/" target="_blank" rel="noopener" class="social-item">
+                        <div class="social-icon">
+                            <svg viewBox="0 0 24 24" fill="#60a5fa" xmlns="http://www.w3.org/2000/svg"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.13 1.45-2.13 2.94v5.66H9.35V9h3.42v1.56h.05c.48-.9 1.65-1.85 3.4-1.85 3.63 0 4.3 2.39 4.3 5.5v6.24zM5.34 7.43a2.07 2.07 0 110-4.14 2.07 2.07 0 010 4.14zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+                        </div>
+                        <div class="social-text">
+                            <div class="label">LinkedIn</div>
+                            <div class="value">Danilo Sebastián Cervan</div>
+                        </div>
+                        <svg class="social-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+                    </a>
+
+                    <a href="mailto:danilocervan_5@outlook.com" class="social-item">
+                        <div class="social-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3 7 12 13 21 7"/></svg>
+                        </div>
+                        <div class="social-text">
+                            <div class="label">Email</div>
+                            <div class="value">danilocervan_5@outlook.com</div>
+                        </div>
+                        <svg class="social-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+                    </a>
+
+                    <a href="tel:+34640223346" class="social-item">
+                        <div class="social-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.37 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.33 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg>
+                        </div>
+                        <div class="social-text">
+                            <div class="label">Teléfono</div>
+                            <div class="value">640 22 33 46</div>
+                        </div>
+                        <svg class="social-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+                    </a>
+
+                    <div class="social-item" style="cursor: default;">
+                        <div class="social-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </div>
+                        <div class="social-text">
+                            <div class="label">Ubicación</div>
+                            <div class="value">Guadalajara, España</div>
+                        </div>
+                    </div>
+
+                    <div class="social-item" style="cursor: default;">
+                        <div class="social-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg>
+                        </div>
+                        <div class="social-text">
+                            <div class="label">Disponibilidad</div>
+                            <div class="value">Incorporación inmediata</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Photo card -->
+                <div class="bento hero-photo">
+                    <img src="img/danilo.jpg" alt="Retrato profesional de Danilo Sebastian">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== EXPERIENCE JOURNEY + TOOLS ===== -->
+    <section id="experiencia" class="fade-section">
+        <div class="container">
+            <div class="experience-grid">
+
+                <div class="bento experience-card">
+                    <div class="experience-header">
+                        <h3>Trayectoria profesional</h3>
+                        <p>Un recorrido por los hitos que han definido mi perfil técnico: de la infraestructura de red al control logístico avanzado.</p>
+                    </div>
+                    <div class="timeline">
+                        <div class="timeline-card">
+                            <div class="timeline-logo"><img src="img/custos.png" alt="Cero Custos Carbón"></div>
+                            <div class="timeline-role">Técnico de Sistemas en Red</div>
+                            <div class="timeline-year">2022</div>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="timeline-logo"><img src="img/3xa.png" alt="3XA INC"></div>
+                            <div class="timeline-role">Open Source Developer</div>
+                            <div class="timeline-year">2023</div>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="timeline-logo"><img src="img/dhl.png" alt="DHL L'Oréal"></div>
+                            <div class="timeline-role">Admin. Logístico</div>
+                            <div class="timeline-year">Actualidad</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bento tools-card">
+                    <div class="tools-cloud">
+                        <div class="tool-chip blue"  style="top: 18px;  left: 18px;  animation-delay: 0s;">JDA</div>
+                        <div class="tool-chip sky"   style="top: 30px;  right: 26px; animation-delay: 0.6s;">SGA</div>
+                        <div class="tool-chip dark"  style="top: 80px;  left: 90px;  animation-delay: 1.2s;">🐧</div>
+                        <div class="tool-chip cyan"  style="top: 60px;  right: 96px; animation-delay: 1.8s;">Py</div>
+                        <div class="tool-chip green" style="top: 140px; left: 30px;  animation-delay: 2.4s;">W</div>
+                        <div class="tool-chip blue"  style="top: 130px; right: 40px; animation-delay: 3.0s;">365</div>
+                        <div class="tool-chip dark"  style="top: 190px; left: 110px; animation-delay: 3.6s;">SQL</div>
+                    </div>
+                    <div class="tools-text">
+                        <h3>Herramientas del día a día</h3>
+                        <p>Del SGA JDA (Blue Yonder) al ecosistema Microsoft 365, pasando por redes, Python y soporte de sistemas: el stack con el que resuelvo retos técnicos y operativos.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PERFIL ===== -->
+    <section id="sobre-mi" class="fade-section">
+        <div class="container">
+            <h2 class="section-title">Perfil profesional</h2>
+            <div class="about-grid">
+                <div class="bento about-card">
+                    <p><strong>Danilo Sebastian Chahuara Cervan.</strong> Mi trayectoria se caracteriza por la versatilidad: uniendo la formación técnica en Administración de Sistemas Informáticos en Red (ASIR) con la ejecución operativa en el sector logístico a través de software especializado como JDA (Blue Yonder).</p>
+                    <p>Vocación por la tecnología, la optimización de infraestructuras y la automatización de tareas. Permiso de conducir, vehículo propio y disponibilidad absoluta para incorporación inmediata.</p>
+                </div>
+                <div class="about-meta">
+                    <div class="bento">
+                        <div class="label">Formación</div>
+                        <div class="value">Técnico Superior ASIR</div>
+                    </div>
+                    <div class="bento">
+                        <div class="label">Ubicación</div>
+                        <div class="value">Guadalajara, España</div>
+                    </div>
+                    <div class="bento">
+                        <div class="label">Movilidad</div>
+                        <div class="value">Permiso B + vehículo</div>
+                    </div>
+                    <div class="bento">
+                        <div class="label">Idiomas</div>
+                        <div class="value">Español nativo · Inglés B1</div>
+                    </div>
                 </div>
             </div>
-            <div class="hero-visual">
-                <div class="code-block">
-                    <div class="code-header">
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                    </div>
-                    <pre><code>const profesional = {
-  nombre: "Danilo Sebastian",
-  perfil: "Sistemas & Logística",
-  habilidades: ["Redes", "SGA/JDA", "Python"],
-  disponibilidad: "Inmediata",
-  estado() {
-    return "Preparado para nuevos retos.";
-  }
-};</code></pre>
+
+            <div class="jobs-grid">
+                <div class="bento job-card">
+                    <h4>Administrador Logístico / Operador</h4>
+                    <div class="job-company">DHL L'Oréal — Actualidad</div>
+                    <ul>
+                        <li>Control exhaustivo de stock mediante SGA JDA.</li>
+                        <li>Planificación estratégica de rutas de distribución.</li>
+                        <li>Supervisión de recepción, almacenamiento y expedición.</li>
+                        <li>Elaboración de informes para cumplimiento de KPIs.</li>
+                    </ul>
+                </div>
+                <div class="bento job-card">
+                    <h4>Open Source Developer</h4>
+                    <div class="job-company">3XA PROJEKT — 3XA INC.</div>
+                    <ul>
+                        <li>Desarrollo y mantenimiento de componentes open source.</li>
+                        <li>Colaboración técnica en la optimización del 3XA PROJEKT.</li>
+                        <li>Mejoras de código y resolución de bugs con control de versiones.</li>
+                        <li>Documentación técnica y soporte a la comunidad.</li>
+                    </ul>
+                </div>
+                <div class="bento job-card">
+                    <h4>Técnico de Sistemas en Red (Prácticas)</h4>
+                    <div class="job-company">Cero Custos Carbón</div>
+                    <ul>
+                        <li>Implementación de infraestructuras de red locales.</li>
+                        <li>Soporte técnico, diagnóstico y resolución de incidencias.</li>
+                        <li>Mantenimiento preventivo de sistemas corporativos.</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="sobre-mi" class="about fade-section">
+    <!-- ===== FORMACIÓN ===== -->
+    <section id="formacion" class="fade-section">
         <div class="container">
-            <h2 class="section-title">Perfil Profesional</h2>
-            <div class="about-content" style="display: flex; gap: 40px; align-items: center;">
-                <div class="about-image" style="flex-shrink: 0;">
-                    <img src="img/danilo.jpg" alt="Fotografía profesional de Danilo" style="width: 280px; height: 280px; border-radius: 12px; object-fit: cover; border: 1px solid rgba(255,255,255,0.8); box-shadow: 0 0 15px rgba(255,255,255,0.3);">
-                </div>
-                <div class="about-text">
-                    <p style="margin-bottom: 15px;">Soy <strong>Danilo Sebastian Chahuara Cervan</strong>. Mi trayectoria profesional se caracteriza por la versatilidad, uniendo la formación técnica en Administración de Sistemas Informáticos en Red (ASIR) con la ejecución operativa en el sector logístico mediante software especializado como JDA (Blue Yonder).</p>
-                    <p>Poseo una fuerte vocación por la tecnología, la optimización de infraestructuras de red y la automatización de tareas. Cuento con permiso de conducir, vehículo propio y disponibilidad absoluta para incorporación inmediata.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="experiencia" class="projects fade-section">
-        <div class="container">
-            <h2 class="section-title">Trayectoria Laboral</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image" style="margin-bottom: 20px;">
-                        <img src="img/dhl.png" alt="Instalaciones logísticas" style="width: 100%; height: 200px; border-radius: 6px; object-fit: cover;">
-                    </div>
-                    <div class="project-info">
-                        <h3>Administrador Logístico / Operador</h3>
-                        <p class="project-company" style="color: #ffffff; text-shadow: 0 0 8px rgba(255,255,255,0.8); margin-bottom: 10px;">DHL L'Oréal — Actualidad</p>
-                        <ul class="experience-list">
-                            <li>Control exhaustivo de stock mediante SGA JDA.</li>
-                            <li>Planificación estratégica de rutas de distribución.</li>
-                            <li>Supervisión de recepción, almacenamiento y expedición.</li>
-                            <li>Elaboración de informes para cumplimiento de KPIs.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image" style="margin-bottom: 20px;">
-                        <img src="img/custos.png" alt="Servidores y redes" style="width: 100%; height: 200px; border-radius: 6px; object-fit: cover;">
-                    </div>
-                    <div class="project-info">
-                        <h3>Técnico de Sistemas en Red (Prácticas)</h3>
-                        <p class="project-company" style="color: #ffffff; text-shadow: 0 0 8px rgba(255,255,255,0.8); margin-bottom: 10px;">Cero Custos Carbón</p>
-                        <ul class="experience-list">
-                            <li>Implementación de infraestructuras de red locales.</li>
-                            <li>Soporte técnico, diagnóstico y resolución de incidencias.</li>
-                            <li>Mantenimiento preventivo de sistemas corporativos.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image" style="margin-bottom: 20px;">
-                        <img src="img/3xa.png" alt="Desarrollo Open Source" style="width: 100%; height: 200px; border-radius: 6px; object-fit: cover;">
-                    </div>
-                    <div class="project-info">
-                        <h3>Open Source Developer — 3XA PROJEKT</h3>
-                        <p class="project-company" style="color: #ffffff; text-shadow: 0 0 8px rgba(255,255,255,0.8); margin-bottom: 10px;">3XA INC.</p>
-                        <ul class="experience-list">
-                            <li>Desarrollo y mantenimiento de componentes dentro del ecosistema open source.</li>
-                            <li>Colaboración técnica en la optimización del 3XA PROJEKT.</li>
-                            <li>Implementación de mejoras de código y resolución de bugs mediante control de versiones.</li>
-                            <li>Documentación técnica y soporte a la comunidad de desarrolladores.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="formacion" class="projects fade-section">
-        <div class="container">
-            <h2 class="section-title">Formación Académica</h2>
-            <div class="projects-grid">
-                <div class="project-card">
+            <h2 class="section-title">Formación académica</h2>
+            <div class="education-grid">
+                <div class="bento education-card">
+                    <span class="edu-year">Grado Superior</span>
                     <h3>Técnico Superior en ASIR</h3>
-                    <p style="color: #ffffff; text-shadow: 0 0 8px rgba(255,255,255,0.8); margin: 10px 0;">Colegio Brianda de Mendoza</p>
-                    <p style="font-size: 0.9rem;">Grado Superior en Administración de Sistemas Informáticos en Red. Enfoque en seguridad y servicios.</p>
+                    <div class="institution">Colegio Brianda de Mendoza</div>
+                    <p>Administración de Sistemas Informáticos en Red con enfoque en seguridad, servicios y administración de infraestructuras.</p>
                 </div>
-                <div class="project-card">
+                <div class="bento education-card">
+                    <span class="edu-year">Bachillerato</span>
                     <h3>Bachillerato</h3>
-                    <p style="color: #ffffff; text-shadow: 0 0 8px rgba(255,255,255,0.8); margin: 10px 0;">Colegio Brianda de Mendoza</p>
-                    <p style="font-size: 0.9rem;">Formación académica preuniversitaria completada con éxito.</p>
+                    <div class="institution">Colegio Brianda de Mendoza</div>
+                    <p>Formación académica preuniversitaria completada con éxito.</p>
                 </div>
-                <div class="project-card">
-                    <h3>Educación Secundaria Obligatoria</h3>
-                    <p style="color: #ffffff; text-shadow: 0 0 8px rgba(255,255,255,0.8); margin: 10px 0;">Colegio Niña María R.R. Adoratrices</p>
-                    <p style="font-size: 0.9rem;">Estudios iniciales cursados en el Colegio Santa Úrsula (Cusco, Perú).</p>
+                <div class="bento education-card">
+                    <span class="edu-year">ESO</span>
+                    <h3>Educación Secundaria</h3>
+                    <div class="institution">Colegio Niña María · R.R. Adoratrices</div>
+                    <p>Estudios iniciales cursados en el Colegio Santa Úrsula (Cusco, Perú).</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="habilidades" class="skills fade-section">
+    <!-- ===== COMPETENCIAS ===== -->
+    <section id="habilidades" class="fade-section">
         <div class="container">
-            <h2 class="section-title">Competencias Técnicas</h2>
+            <h2 class="section-title">Competencias técnicas</h2>
             <div class="skills-grid">
-                <div class="skill-card">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 15px; filter: drop-shadow(0 0 8px rgba(255,255,255,0.8));"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
-                    <h3>Gestión Logística</h3>
-                    <p style="font-size: 0.9rem; margin-top: 10px;">Dominio avanzado de JDA (Blue Yonder) para el control integral de operativas logísticas.</p>
-                </div>
-                
-                <div class="skill-card">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 15px; filter: drop-shadow(0 0 8px rgba(255,255,255,0.8));"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
-                    <h3>Sistemas y Redes</h3>
-                    <p style="font-size: 0.9rem; margin-top: 10px;">Administración de entornos de red, configuración de equipos y Microsoft Office 365.</p>
+                <div class="bento skill-card">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+                    </div>
+                    <h3>Gestión logística</h3>
+                    <p>Dominio avanzado de JDA (Blue Yonder) para el control integral de operativas logísticas y KPIs.</p>
                 </div>
 
-                <div class="skill-card">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 15px; filter: drop-shadow(0 0 8px rgba(255,255,255,0.8));"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-                    <h3>Desarrollo Web</h3>
-                    <p style="font-size: 0.9rem; margin-top: 10px;">Capacidad para automatizar procesos y maquetar estructuras con Python y HTML.</p>
+                <div class="bento skill-card">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                    </div>
+                    <h3>Sistemas y redes</h3>
+                    <p>Administración de entornos de red, configuración de equipos y Microsoft Office 365.</p>
+                </div>
+
+                <div class="bento skill-card">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                    </div>
+                    <h3>Desarrollo & automatización</h3>
+                    <p>Capacidad para automatizar procesos y maquetar estructuras con Python y HTML.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contacto" class="contact fade-section" style="padding-bottom: 60px;">
+    <!-- ===== CONTACTO ===== -->
+    <section id="contacto" class="fade-section">
         <div class="container">
-            <h2 class="section-title">Contacto</h2>
-            <div style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: space-between;">
-                
-                <div class="contact-info" style="flex: 1; min-width: 300px;">
-                    <p style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="filter: drop-shadow(0 0 5px rgba(255,255,255,0.8));"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                        640 22 33 46
-                    </p>
-                    <p style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="filter: drop-shadow(0 0 5px rgba(255,255,255,0.8));"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                        danilocervan_5@outlook.com
-                    </p>
-                
-                    <p style="display: flex; align-items: center; gap: 10px; margin-bottom: 40px;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="filter: drop-shadow(0 0 5px rgba(255,255,255,0.8));"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                        <a href="https://www.linkedin.com/in/danilo-sebastián-cervan-9366b9333/" target="_blank" style="color: #ffffff; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.3);">LinkedIn Perfil Profesional</a>
-                    </p>
+            <div class="contact-grid">
+                <div class="bento contact-info-card">
+                    <h3>Hablemos</h3>
+                    <p class="intro">¿Buscas un perfil técnico-logístico con rigor y disponibilidad inmediata? Escríbeme y coordinamos una conversación.</p>
+
+                    <div class="contact-line">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.37 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.33 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg>
+                        <div>
+                            <div class="label">Teléfono</div>
+                            <div class="value">640 22 33 46</div>
+                        </div>
+                    </div>
+
+                    <div class="contact-line">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3 7 12 13 21 7"/></svg>
+                        <div>
+                            <div class="label">Email</div>
+                            <div class="value"><a href="mailto:danilocervan_5@outlook.com">danilocervan_5@outlook.com</a></div>
+                        </div>
+                    </div>
+
+                    <div class="contact-line">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                        <div>
+                            <div class="label">LinkedIn</div>
+                            <div class="value"><a href="https://www.linkedin.com/in/danilo-sebastián-cervan-9366b9333/" target="_blank" rel="noopener">Ver perfil profesional</a></div>
+                        </div>
+                    </div>
                 </div>
 
-                <form class="contact-form" id="contactForm" style="flex: 2; min-width: 300px; display: flex; flex-direction: column; gap: 20px;">
-                    <input type="text" id="name" placeholder="Nombre completo" required>
-                    <input type="email" id="email" placeholder="Correo electrónico" required>
-                    <textarea id="message" rows="5" placeholder="Indique el motivo de su consulta..." required></textarea>
-                    <button type="submit" class="btn btn-primary" style="width: fit-content;">Enviar Mensaje</button>
-                </form>
-
+                <div class="bento contact-form-card">
+                    <form class="contact-form" id="contactForm">
+                        <div>
+                            <label for="name">Nombre completo</label>
+                            <input type="text" id="name" placeholder="Tu nombre" required>
+                        </div>
+                        <div>
+                            <label for="email">Correo electrónico</label>
+                            <input type="email" id="email" placeholder="tucorreo@ejemplo.com" required>
+                        </div>
+                        <div>
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" rows="5" placeholder="Indica el motivo de tu consulta..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="align-self: flex-start;">Enviar mensaje</button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer style="text-align: center; padding: 40px 0; border-top: 1px solid rgba(255,255,255,0.2); margin-top: 40px; box-shadow: 0 -5px 15px rgba(255,255,255,0.05);">
-        <p style="font-size: 0.8rem; letter-spacing: 1px; color: #ffffff; text-shadow: 0 0 5px rgba(255,255,255,0.5);">&copy; 2026 Danilo Sebastian Chahuara Cervan.</p>
+    <footer>
+        <p>&copy; 2026 Danilo Sebastian Chahuara Cervan · Portfolio profesional</p>
     </footer>
 
     <script src="app.js"></script>
