@@ -64,3 +64,8 @@ if (contactForm) {
         }, 2800);
     });
 }
+
+// ===== INICIALIZACIÓN: Activamos los efectos al cargar =====
+window.addEventListener('load', () => {
+    activarGlowEnPagina();
+});
