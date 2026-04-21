@@ -63,8 +63,4 @@ if (contactForm) {
             this.reset();
         }, 2800);
     });
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> f0c728622f7239205e21e2ea51ac382e04e2fe28
